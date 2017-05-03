@@ -180,6 +180,23 @@ export default class CollapsingToolbarLayout extends Component {
   _getItems(count) {
     let items = [];
 
+    items.push(
+      <View
+        key={'input_container'}
+        style={[styles.item, {
+          backgroundColor: ITEM_COLORS[5],
+        }]}
+      >
+        <TextInput
+          style={{
+            width: 300,
+            height: 40,
+          }}
+          placeholder={'Test Input'}
+        />
+      </View>
+    );
+
     for (let i = 0; i < count; i++) {
       items.push(
         <View
